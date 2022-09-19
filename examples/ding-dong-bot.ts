@@ -118,6 +118,12 @@ async function onMessage ({
   if (/ding/i.test(text || '')) {
     await puppet.messageSendText(roomId! || talkerId!, 'dong')
   }
+
+  if (/核酸/i.test(text || '')) {
+    console.log("find the secret keyword!");
+    let xiaoheOpenId = "25984983318400377@openim";
+    await puppet.messageSendText(xiaoheOpenId!, '从某个微信聊天中收到了要做核酸的消息，请查阅核实~');
+  }
 }
 
 /**
